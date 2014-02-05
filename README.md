@@ -1,6 +1,7 @@
 # Ssha
 
-This module create SSHA hash     and check password
+This module create SSHA hash and check password
+
 
 ## Installation
 
@@ -18,20 +19,26 @@ Or install it yourself as:
 
 ## Usage
 
-SSHA.hash_password('password')
+    SSHA.hash_password('password')
 
-    or
+or
 
-SSHA.hash_password('password', 'you salt')
+    SSHA.hash_password('password', 'you salt')
 
 
 Check password:
 
-if SSHA.check_password('password','you hash')
-    puts "password OK"
-else
-    puts "Wrong password"
-end
+    if SSHA.check_password('password','you hash')
+      puts "password OK"
+    else
+      puts "Wrong password"
+    end
+
+
+SSHA.check_password('test','you hash')
+
+
+
 
 ## Contributing
 
