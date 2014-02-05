@@ -14,7 +14,7 @@ module SSHA
   # one.
   #
   def self.hash_password(password, salt=SSHA.new_salt)
-    salt.to_s + "{SSHA}" + Base64.encode64("#{Digest::SHA1.digest("#{password}#{salt}")}#{salt}").chomp
+    '*' + salt.to_s + "*{SSHA}" + Base64.encode64("#{Digest::SHA1.digest("#{password}#{salt}")}#{salt}").chomp
   end
 
   # Check the supplied password against the given hash and return true if they
