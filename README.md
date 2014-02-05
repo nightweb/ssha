@@ -35,7 +35,9 @@ Check password:
     end
 
 
-SSHA.check_password('test','you hash')
+#Example
+    > SSHA.hash_password('test')
+    => "*4e48d0e9c221f4b5*{SSHA}awu0CUj+cApR53Hw2KQAh5grsX40ZTQ4ZDBlOWMyMjFmNGI1"
 
 
 
