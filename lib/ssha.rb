@@ -6,8 +6,8 @@ module SSHA
 
   # get 16 random hex bytes
   #
-  def self.new_salt
-    16.times.inject('') {|t| t << rand(16).to_s(16)}
+  def self.new_salt(times=16, rand_opt=16, dim = 16)
+    times.times.inject('') {|t| t << rand(rand_opt).to_s(dim)}
   end
 
   # hash the password using the given salt. If no salt is supplied, use a new
