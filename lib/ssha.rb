@@ -2,12 +2,9 @@ require "ssha/version"
 require 'base64'
 require 'digest'
 module SSHA
-  # Your code goes here...
 
-  # get 16 random hex bytes
-  #
-  def self.new_salt(times=16, rand_opt=16, dim = 16)
-    times.times.inject('') {|t| t << rand(rand_opt).to_s(dim)}
+  def self.new_salt(lenght=16, rand_opt=16, dim = 16)
+    lenght.times.inject('') {|t| t << rand(rand_opt).to_s(dim)}
   end
 
   # hash the password using the given salt. If no salt is supplied, use a new
